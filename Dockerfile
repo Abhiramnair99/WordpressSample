@@ -4,4 +4,5 @@ ARG ENVIRONMENT
 RUN echo hello
 RUN printenv
 RUN echo $ENVIRONMENT
+break
 RUN echo "this is test for" $FRONT_END_URI 
