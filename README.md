@@ -1,3 +1,2 @@
 # wordpressSample
-testing
-101
+test
