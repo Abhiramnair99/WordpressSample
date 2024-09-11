@@ -1,4 +1,3 @@
 # wordpressSample
 testing
-test
 
