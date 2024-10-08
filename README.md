@@ -1,2 +1,2 @@
 # wordpressSample
-testing auto-trigge
+testing auto-trigger
