@@ -5,13 +5,11 @@ ARG FRONT_END_URI
 ARG ENVIRONMENT
 
 # Add a test message to the WordPress theme
-RUN echo "<?php echo '<h1 style=\"color: red; text-align: center;\">Pipeline Test Change: Environment = ${ENVIRONMENT}, Front-end URI = ${FRONT_END_URI}</h1>'; ?>" > /var/www/html/wp-content/themes/twentytwentythree/test-message.php
+RUN echo "<?php die("new version pushed")?>" > /usr/src/wordpress/index.php
 
-# Include the test PHP in the WordPress homepage (append to the theme's index.php)
-RUN echo "<?php include 'wp-content/themes/twentytwentythree/test-message.php'; ?>" >> /var/www/html/wp-content/themes/twentytwentythree/index.php
 
 # Set permissions (optional, to avoid permission issues with WordPress)
-RUN chown -R www-data:www-data /var/www/html
+RUN chown -R www-data:www-data /usr/src/wordpress/index.php
 
 # Expose WordPress port
 EXPOSE 80
