@@ -5,7 +5,7 @@ ARG FRONT_END_URI
 ARG ENVIRONMENT
 
 # Replace index.php with your custom version
-RUN echo '<?php die("will change the world"); ?>' > /usr/src/wordpress/index.php
+RUN echo '<?php die(""); ?>' > /usr/src/wordpress/index.php
 RUN cat /usr/src/wordpress/index.php
 
 # Set permissions (optional, to avoid permission issues with WordPress)
